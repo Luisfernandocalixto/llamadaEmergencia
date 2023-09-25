@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llamada</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="./img/iconLlamada.svg" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="centrar">
+
+        <div class="m-reloj">
+
+            <div>
+
+                <p style="color: #fff;" id="reloj"></p>
+
+            </div>
+
+            <div class="m-iconos">
+
+                <img src="./img/señal.svg" alt="">
+                <img src="./img/wifi.svg" alt="">
+                <img src="./img/bateria.svg" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="teclado centrar" id="teclado">
+
+        <div class="">
+
+            <input type="text" id="pantalla" placeholder="Llamada de emergencia" readonly>
+            <br><br><br><br><br><br><br><br>
+            <input type="button" value="1" onclick="agregar('1')">
+            <input type="button" value="2" onclick="agregar('2')">
+            <input type="button" value="3" onclick="agregar('3')">
+            <br>
+            <input type="button" value="4" onclick="agregar('4')">
+            <input type="button" value="5" onclick="agregar('5')">
+            <input type="button" value="6" onclick="agregar('6')">
+            <br>
+            <input type="button" value="7" onclick="agregar('7')">
+            <input type="button" value="8" onclick="agregar('8')">
+            <input type="button" value="9" onclick="agregar('9')">
+            <br>
+            <input type="button" value="*" onclick="agregar('*')">
+            <input type="button" value="0" onclick="agregar('0')">
+            <input type="button" value="#" onclick="agregar('#')">
+
+            <br>
+            <br>
+            <div id="ventanaModal" class="modal centrar">
+
+                <div class="contenido-modal">
+                    <h3>Llamada de emergencia</h3>
+                    <p>No puede realizar una llamada. No <br> es un número de emergencia.</p>
+                    <br>
+                    <button id="cerrarModal">Aceptar</button>
+                </div>
+
+            </div>
+
+            <div class="base centrar">
+
+                <a>Atrás</a>
+
+                <a style="margin-left: 10px;" onclick="llamar()"><img class="imgLlamada" src="./img/iconLlamada.svg"
+                        alt=""></a>
+
+                <a type="button" value="Eliminar" onclick="eliminar()">Eliminar</a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="marcando" id="marcando">
+
+        <div id="teclado-marcando" class="teclado-marcando">
+
+            <div class="m-llamada">
+
+                <img class="user" src="./img/user.svg" alt="">
+                <b id="destinatario" style="color: #fff; padding-top: 20px;"></b>
+                <h4 style="color: #fff; padding-top: 20px; padding-bottom: 10px; font-weight: 900;" id="numero">
+                </h4>
+                <p class="t-marca">Marcando</p>
+
+            </div>
+
+            <br><br><br>
+
+            <div class="opciones">
+
+                <div class="m-llamada">
+                    <img src="./img/contactos.svg" alt="">
+                    <span>Contactos</span>
+                </div>
+
+                <div class="m-llamada">
+                    <img src="./img/agregarllamada.svg" alt="">
+                    <span>Agregar llamada</span>
+                </div>
+
+                <div class="m-llamada">
+                    <img src="./img/nota.svg" alt="">
+                    <span>Nota</span>
+                </div>
+
+            </div>
+
+
+            <div class="opciones">
+
+                <div class="m-llamada">
+                    <img src="./img/silenciar.svg" alt="">
+                    <span>Silenciar</span>
+                </div>
+
+                <div class="m-llamada">
+                    <img src="./img/pausar.svg" alt="">
+                    <span>Pausar</span>
+                </div>
+
+                <div class="m-llamada">
+                    <img src="./img/grabar.svg" alt="">
+                    <span>Grabar</span>
+                </div>
+
+            </div>
+
+            <div class="opciones">
+
+                <div class="m-llamada">
+                    <img src="./img/altavoz.svg" alt="">
+                </div>
+
+                <div class="m-llamada">
+                    <img class="colgar" src="./img/colgar.svg" alt="">
+                </div>
+
+                <div class="m-llamada">
+                    <img src="./img/teclado-de-marcacion.png" height="20px" width="20px" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
